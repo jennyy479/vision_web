@@ -41,3 +41,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+body, html, html body {
+  font-family: Almaden Sans, Helvetica, Arial !important;
+  background: #00031f;
+}

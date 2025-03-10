@@ -1,0 +1,128 @@
+.main-nav {
+  background-color: #fff;
+  box-shadow: 0 0 2px #0003;
+
+}
+
+.main-nav-container {
+  padding: 2rem 4rem;  
+}
+.left-menu {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  color: #666487;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 0;
+}
+
+
+/*
+選單線
+*/
+.line {
+  cursor: pointer;
+  display: block;
+  padding: 16px;
+  position: fixed;
+  right: 0;
+  top: 12px;
+  z-index: 5;
+}
+
+.line .menu,
+.line .menu::before,
+.line .menu::after {
+  background: #222;
+  content: '';
+  display: block;
+  height: 1px;
+  position: absolute;
+
+  transition: background ease .15s, top ease .15s .15s, transform ease .15s;
+  width: 20px;
+}
+.line .menu {
+  right: 18px;
+  top: 27px;
+}
+
+.line .menu::before {
+  top: -6px;
+}
+
+.line .menu::after {
+  top: 6px;
+}
+
+/*
+點選選單變叉叉
+*/
+#menu:checked + .line .menu {
+  background: transparent;
+}
+
+#menu:checked + .line .menu::before {
+  transform: rotate(45deg);
+}
+
+#menu:checked + .line .menu::after {
+  transform: rotate(-45deg);
+}
+
+#menu:checked + .line .menu::before,
+#menu:checked + .line .menu::after {
+  top: 0;
+  transition: top ease .15s, transform ease .15s .15s;
+}
+
+/*
+選單開合
+*/
+#menu:checked ~ .menu-list {
+  width: 100vw;
+}
+
+.menu-list {
+  width: 0px;
+  height: 100vh;
+  background: #FFF;
+  padding-top: 60px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 1;
+  transition: all .3s;
+  overflow: hidden;
+}
+
+/*
+選單向外推
+*/
+.menu-list ul {
+    list-style: none;
+    margin-left:70px;
+    padding: 0;
+}
+.menu-list ul>li{
+    display: block;
+    width:100px;
+}
+
+input#menu {
+  display: none;
+}
+
+.banner-container {
+  flex: 1 1 0%;
+  max-width: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bigger-font {
+  color: #fff;
+}
