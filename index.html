@@ -8,65 +8,8 @@
   <link rel="stylesheet" href="/src/css/base.css">
   <link rel="stylesheet" href="/src/css/index.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-  <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
-    }
-
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .swiper {
-      width: 100%;
-      height: 600px;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 40px;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .content {
-      color: #fff;
-      flex: 1;
-      max-width: 40%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-    }
-
-    .image {
-      flex: 1;
-      max-width: 60%;
-    }
-
-    .image img {
-      width: 90%;
-      height: auto;
-      display: block;
-    }
-  </style>
 </head>
+
 
 <body>
   <nav class="main-nav">
@@ -95,41 +38,145 @@
   </nav>
   </div>
 
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <div class="content">
-          <h1>
-            全新 Ai 商務時代崛起
-          </h1>
-          <div class="desc">
-            <span>Zoom Meetings x Ai Companion</span>
-          </div>
-          <div class="chip-list">
-            <div class="chip">會議逐字稿</div>
-            <div class="chip">會議記錄總結</div>
-            <div class="chip">多語言翻譯</div>
-          </div>
+  <section id="banner"></section>
 
-        </div>
-        <div class="image">
-          <img src="/src/asset/image/zoom-ai.png" alt="zoom-ai" srcset="">
-        </div>
+  <section id="feature">
+    <div class="description">
 
-
+      <div class="text-box">
+        <h3>優質的視訊會議體驗</h3>
+        <p>穩定高清連線品質，跨地點、裝置，隨時隨地輕鬆開啟會議。</p>
       </div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
+     
+      <div class="text-box">
+        <h3>免費內建的Ai 助手</h3>
+        <p>引進Ai 協作助手，透過現代企業解決方案，無縫優化工作流程，提高會議效率！</p>
+      </div>
 
+      <div class="text-box">
+        <h3>台灣本地客服支援</h3>
+        <p>台灣在地中文客服，協助客戶諮詢方案與視訊整合規劃。</p>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  <section class="section-row" id="zoom-meeting">
+    <div class="content">
+      <img src="/src/asset/image/zoom-meeting.svg" alt="zoom-meeting">
+      <h1>
+        提供AI視訊會議系統及多功能會議室方案
+        透過視訊會議凝聚團隊
+      </h1>
+      <div class="desc">
+        <span>
+          我們認為數位轉型是一場馬拉松，而不是一場衝刺。 但透過正確的方法、正確的技術，並將人放在過程的核心，可以加快旅程。</span>
+      </div>
+    </div>
+    <div class="image">
+      <img src="/src/asset/image/zoom-meeting-with-woman.png" alt="zzoom-meeting-with-woman" srcset="">
+    </div> 
+  </section>
+
+  <section id="add">
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div thumbsSlider="" class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+        </div>
+        <div class="swiper-slide">
+          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+        </div>
+      </div>
+    </div>
+  </section>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
+    fetch('bannerSwiper.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('banner').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading banner:', error));
+
+    
     var swiper = new Swiper(".mySwiper", {
-      pagination: {
-        el: ".swiper-pagination",
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
       },
     });
   </script>
