@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,97 +9,92 @@
   <link rel="stylesheet" href="/src/css/index.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
   <style>
-      html,
-      body {
-        position: relative;
-        height: 100%;
-      }
-    
-      body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        margin: 0;
-        padding: 0;
-      }
-    
-      .swiper {
-        width: 100%;
-        height: 600px;
-      }
-    
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background:  #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 40px;
-      }
-    
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
 
-      .content {
-        color: #fff;
-        flex: 1;
-        max-width: 40%;
-        display: flex; 
-        flex-direction: column; 
-        align-items: flex-start; 
-        justify-content: center; 
-      }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 0;
+    }
 
-      .image {
-        flex: 1;
-        max-width: 60%;
-      }
+    .swiper {
+      width: 100%;
+      height: 600px;
+    }
 
-      .image img {
-        width: 90%;
-        height: auto;
-        display: block;
-      }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
 
-    </style>
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      color: #fff;
+      flex: 1;
+      max-width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .image {
+      flex: 1;
+      max-width: 60%;
+    }
+
+    .image img {
+      width: 90%;
+      height: auto;
+      display: block;
+    }
+  </style>
 </head>
-<body>
- <div class="body">
 
-    <nav class="main-nav">
-      <div class="main-nav-container">
-        <ul class="left-menu">
-          <li>視野科技｜Zoom台灣服務</li>
+<body>
+  <nav class="main-nav">
+    <ul class="left-menu">
+      <li>視野科技｜Zoom台灣服務</li>
+      <li>常見問題</li>
+      <li> 加值服務</li>
+      <li> 方案購買</li>
+
+
+    </ul>
+    <div class="right-menu">
+      <input type="checkbox" id="menu">
+      <label for="menu" class="line">
+        <div class="menu"></div>
+      </label>
+
+      <div class="menu-list">
+        <ul>
           <li>常見問題</li>
-          <li> 加值服務</li>
-          <li> 方案購買</li>
-      
-         
+          <li>加值服務</li>
+          <li>方案購買</li>
         </ul>
-        <div class="right-menu">
-          <input type="checkbox" id="menu">
-          <label for="menu" class="line">
-            <div class="menu"></div>
-          </label>
-          
-          <div class="menu-list">
-            <ul>
-              <li>常見問題</li>
-              <li>加值服務</li>
-              <li>方案購買</li>
-            </ul>
-          </div>
-        </div>
       </div>
-     </nav>
     </div>
- </div>
- 
+  </nav>
+  </div>
+
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -114,13 +110,13 @@
             <div class="chip">會議記錄總結</div>
             <div class="chip">多語言翻譯</div>
           </div>
-         
+
         </div>
         <div class="image">
           <img src="/src/asset/image/zoom-ai.png" alt="zoom-ai" srcset="">
         </div>
-    
-        
+
+
       </div>
       <div class="swiper-slide">Slide 2</div>
       <div class="swiper-slide">Slide 3</div>
@@ -129,7 +125,7 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  
+
   <script>
     var swiper = new Swiper(".mySwiper", {
       pagination: {
@@ -138,4 +134,5 @@
     });
   </script>
 </body>
+
 </html>

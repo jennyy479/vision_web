@@ -1,10 +1,12 @@
 .main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #fff;
-  box-shadow: 0 0 2px #0003;
-}
-
-.main-nav-container {
-  padding: 2rem 4rem;  
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 2rem 4rem;
 }
 
 .left-menu {
@@ -56,52 +58,58 @@
 }
 
 /* 點選選單變叉叉 */
-#menu:checked + .line .menu {
+#menu:checked+.line .menu {
   background: transparent;
 }
 
-#menu:checked + .line .menu::before {
+#menu:checked+.line .menu::before {
   transform: rotate(45deg);
 }
 
-#menu:checked + .line .menu::after {
+#menu:checked+.line .menu::after {
   transform: rotate(-45deg);
 }
 
-#menu:checked + .line .menu::before,
-#menu:checked + .line .menu::after {
+#menu:checked+.line .menu::before,
+#menu:checked+.line .menu::after {
   top: 0;
   transition: top ease .15s, transform ease .15s .15s;
 }
 
 /* 選單開合 */
-#menu:checked ~ .menu-list {
-  width: 100vw;
+#menu:checked~.menu-list {
+  height: 100vh;
+  /* 設置為完整視窗高度 */
+  transform: translateY(0);
+  /* 讓選單往下出現 */
 }
 
 .menu-list {
-  width: 0px;
-  height: 100vh;
-  background: #FFF;
-  padding-top: 60px;
+  position: fixed;
   top: 0;
   left: 0;
-  position: fixed;
-  z-index: 3;
-  transition: all .3s;
+  width: 100%;
+  height: 0;
+  /* 初始高度為 0 */
+  background: #FFF;
+  z-index: 999;
+  padding-top: 0;
+  transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
   overflow: hidden;
-  color: #666487;
+  transform: translateY(-100%);
+  /* 初始往上隱藏 */
 }
 
 /* 選單向外推 */
 .menu-list ul {
   list-style: none;
-  margin-left:70px;
+  margin-left: 70px;
   padding: 0;
 }
-.menu-list ul>li{
+
+.menu-list ul>li {
   display: block;
-  width:100px;
+  width: 100px;
 }
 
 input#menu {
@@ -110,6 +118,10 @@ input#menu {
 
 /* 確保選單在小螢幕時變成漢堡選單 */
 @media screen and (max-width: 1024px) {
+  .main-nav {
+    z-index: 1000;
+  }
+
   .left-menu {
     display: none;
   }
@@ -122,21 +134,26 @@ input#menu {
   }
 
   .menu-list {
-    width: 0px;
-    height: 100vh;
-    background: #FFF;
-    padding-top: 60px;
-    top: 0;
-    left: 0;
     position: fixed;
-    z-index: 9;
-    transition: all .3s;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: #FFF;
+    z-index: 1;
+    padding-top: 0;
+    transition: height 0.3s ease-in-out,
+      opacity 0.2s ease-in-out,
+      visibility 0.2s ease-in-out;
     overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
   }
 
   #menu:checked~.menu-list {
     width: 100vw;
-    /* 小螢幕時選單開啟占據 80% 寬度 */
+    opacity: 1;
+    visibility: visible;
   }
 
   .menu-list ul {
